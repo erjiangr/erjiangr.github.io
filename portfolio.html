@@ -51,37 +51,10 @@
                     </a>
                 </div>
             </div>
-            <div id="button" class="chevron">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.81 241.46">
-                    <polygon class="chevron1" points="240.31 168.69 120.41 240.88 0.5 168.69 0.5 160.88 120.41 233.07 240.31 160.88 240.31 168.69"/>
-                    <polygon class="chevron2" points="240.31 88.69 120.41 160.88 0.5 88.69 0.5 80.88 120.41 153.08 240.31 80.88 240.31 88.69"/>
-                    <polygon class="chevron3" points="240.31 8.69 120.41 80.88 0.5 8.69 0.5 0.89 120.41 73.08 240.31 0.89 240.31 8.69"/>
-                </svg>
-            </div>
         </div>
     </div>
     <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
     <script type="text/javascript">
-        function drawSVG(pathID) {
-            var pathE = document.querySelector(pathID);
-            var length = pathE.getTotalLength();
-            pathE.style.transition = pathE.style.WebkitTransition = 'none';
-            pathE.style.strokeDasharray = length + ' ' + length;
-            pathE.style.strokeDashoffset = length;
-            pathE.getBoundingClientRect();
-            pathE.style.transition = pathE.style.WebkitTransition = 'stroke-dashoffset 1s ease-in-out';
-            pathE.style.strokeDashoffset = '0';
-        }
-        function undrawSVG(pathID){
-            var pathE = document.querySelector(pathID);
-            var length = pathE.getTotalLength();
-            pathE.style.transition = pathE.style.WebkitTransition = 'none';
-            pathE.style.strokeDasharray = length + ' ' + length;
-            pathE.style.strokeDashoffset = 0;
-            pathE.getBoundingClientRect();
-            pathE.style.transition = pathE.style.WebkitTransition = 'stroke-dashoffset 0.5s ease-in-out';
-            pathE.style.strokeDashoffset = length;
-        }
         function gotoAboutME() {
             window.location = "aboutme.html";
         }
@@ -105,17 +78,5 @@
                 }, 1000);
             })
         }
-        drawSVG('.chevron .chevron1')
-        drawSVG('.chevron .chevron2')
-        drawSVG('.chevron .chevron3')
-        $(function() {
-            $('#button').click(function() {
-                undrawSVG('.chevron .chevron1');
-                undrawSVG('.chevron .chevron2');
-                undrawSVG('.chevron .chevron3');
-                $('#portfolio').addClass('scene_element--fadeOut');
-                setTimeout(function() {gotoAboutME()}, 500);
-            });
-        });
     </script>
 </body>
