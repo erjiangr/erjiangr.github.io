@@ -1,0 +1,315 @@
+body {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+}
+
+.portbody {
+  height: 200vh;
+  overflow: scroll;
+}
+
+.container .name {
+  padding: 8em 8em;
+}
+
+.container .name .letterE {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .name .letterR {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .name .letterI1 {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .name .letterC {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .name .letterJ {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .name .letterI2 {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .name .letterA {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .name .letterN {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .name .letterG {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.container .chevron {
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+  margin-bottom: 0em;
+  padding-bottom: 4em;
+  height: 4em;
+  width: 4em;
+}
+
+.container .chevron .chevron1 {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+
+.container .chevron .chevron2 {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+
+.container .chevron .chevron3 {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+
+.container .text {
+  width: 60%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 10em;
+  padding-bottom: 10em;
+  line-height: 2rem;
+  color: black;
+}
+
+.container .text .pic {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.container .loaderBloc {
+  width: 60px;
+  height: 60px;
+  padding-left: 50%;
+  padding-right: 50%;
+  padding-top: 10em;
+}
+
+.container .loaderBloc .loader {
+  border: 2px solid white;
+  /* Light grey */
+  border-top: 2px solid black;
+  /* Blue */
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: spin 0.75s linear infinite;
+          animation: spin 0.75s linear infinite;
+}
+
+.container .portfolio {
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  opacity: 0;
+}
+
+.container .portfolio .portcolumnone {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+}
+
+.container .portfolio .portcolumntwo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+}
+
+.m-scene .scene_element {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.m-scene .scene_element--slideUp {
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+}
+
+.m-scene .scene_element--slideOut {
+  -webkit-animation-name: slideOut;
+          animation-name: slideOut;
+}
+
+.m-scene .scene_element--fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+.m-scene .scene_element--fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  100% {
+    opacity: 0%;
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+  100% {
+    opacity: 0%;
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="portbody">
+    <div class="container">
+        <div class="m-scene">
+            <div id="loaderBloc" class="loaderBloc">
+                <div class="loader"></div>
+            </div>
+            <div id='portfolio' class="text portfolio">
+                <div class="portcolumnone">
+                    <a target="_blank" href="port/SANGUINE.jpeg">
+                        <img class='pic' src="port/SANGUINE.jpeg" alt="SANGUINE">
+                    </a>
+                    <a target="_blank" href="port/SNAPSHOT.jpeg">
+                        <img class='pic' src="port/SNAPSHOT.jpeg" alt="SNAPSHOT">
+                    </a>
+                    <a target="_blank" href="port/CLOCKWORK.jpeg">
+                        <img class='pic' src="port/CLOCKWORK.jpeg" alt="CLOCKWORK">
+                    </a>
+                    <a target="_blank" href="port/HEADRUSH.jpeg">
+                        <img class='pic' src="port/HEADRUSH.jpeg" alt="HEADRUSH">
+                    </a>
+                    <a target="_blank" href="port/TEMPERED.jpeg">
+                        <img class='pic' src="port/TEMPERED.jpeg" alt="TEMPERED">
+                    </a>
+                    <a target="_blank" href="port/SPLINE.jpeg">
+                        <img class='pic' src="port/SPLINE.jpeg" alt="SPLINE">
+                    </a>
+                </div>
+            <div class="portcolumntwo">
+                    <a target="_blank" href="port/BLOOM.jpeg">
+                        <img class='pic' src="port/BLOOM.jpeg" alt="BLOOM">
+                    </a>
+                    <a target="_blank" href="port/DAPHNES.jpeg">
+                        <img class='pic' src="port/DAPHNES.jpeg" alt="SNAPSHOT">
+                    </a>
+                    <a target="_blank" href="port/THREADED.jpeg">
+                        <img class='pic' src="port/THREADED.jpeg" alt="THREADED">
+                    </a>
+                    <a target="_blank" href="port/HALATION.jpeg">
+                        <img class='pic' src="port/HALATION.jpeg" alt="HALATION">
+                    </a>
+                    <a target="_blank" href="port/ORCHID.jpeg">
+                        <img class='pic' src="port/ORCHID.jpeg" alt="ORCHID">
+                    </a>
+                </div>
+            </div>
+            <div id="button" class="chevron">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.81 241.46">
+                    <polygon class="chevron1" points="240.31 168.69 120.41 240.88 0.5 168.69 0.5 160.88 120.41 233.07 240.31 160.88 240.31 168.69"/>
+                    <polygon class="chevron2" points="240.31 88.69 120.41 160.88 0.5 88.69 0.5 80.88 120.41 153.08 240.31 80.88 240.31 88.69"/>
+                    <polygon class="chevron3" points="240.31 8.69 120.41 80.88 0.5 8.69 0.5 0.89 120.41 73.08 240.31 0.89 240.31 8.69"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        function drawSVG(pathID) {
+            var pathE = document.querySelector(pathID);
+            var length = pathE.getTotalLength();
+            pathE.style.transition = pathE.style.WebkitTransition = 'none';
+            pathE.style.strokeDasharray = length + ' ' + length;
+            pathE.style.strokeDashoffset = length;
+            pathE.getBoundingClientRect();
+            pathE.style.transition = pathE.style.WebkitTransition = 'stroke-dashoffset 1s ease-in-out';
+            pathE.style.strokeDashoffset = '0';
+        }
+        function undrawSVG(pathID){
+            var pathE = document.querySelector(pathID);
+            var length = pathE.getTotalLength();
+            pathE.style.transition = pathE.style.WebkitTransition = 'none';
+            pathE.style.strokeDasharray = length + ' ' + length;
+            pathE.style.strokeDashoffset = 0;
+            pathE.getBoundingClientRect();
+            pathE.style.transition = pathE.style.WebkitTransition = 'stroke-dashoffset 0.5s ease-in-out';
+            pathE.style.strokeDashoffset = length;
+        }
+        function gotoAboutME() {
+            window.location = "aboutme.html";
+        }
+        if(document.querySelector('.pic').complete) {
+            $('#loaderBloc').addClass('scene_element');
+            $('#loaderBloc').addClass('scene_element--fadeOut');
+            setTimeout(function() {
+                $(".loaderBloc").hide();
+                $('#portfolio').addClass('scene_element');
+                $('#portfolio').addClass('scene_element--fadeIn');
+            }, 1000);
+        }
+        else {
+            document.querySelector('.pic').addEventListener('load', function(){
+                $('#loaderBloc').addClass('scene_element');
+                $('#loaderBloc').addClass('scene_element--fadeOut');
+                setTimeout(function() {
+                    $(".loaderBloc").hide();
+                    $('#portfolio').addClass('scene_element');
+                    $('#portfolio').addClass('scene_element--fadeIn');
+                }, 1000);
+            })
+        }
+        drawSVG('.chevron .chevron1')
+        drawSVG('.chevron .chevron2')
+        drawSVG('.chevron .chevron3')
+        $(function() {
+            $('#button').click(function() {
+                undrawSVG('.chevron .chevron1');
+                undrawSVG('.chevron .chevron2');
+                undrawSVG('.chevron .chevron3');
+                $('#portfolio').addClass('scene_element--fadeOut');
+                setTimeout(function() {gotoAboutME()}, 500);
+            });
+        });
+    </script>
+</body>
