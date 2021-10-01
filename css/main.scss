@@ -2,6 +2,7 @@ body {
     font-family: Helvetica;
     margin: 0;
     padding: 0;
+    padding-bottom: 10em;
     height: 100vh;
     overflow: scroll;
     background-color:white;
@@ -63,11 +64,51 @@ body {
             fill:none; stroke:black; stroke-width:3; stroke-miterlimit:10;
         }
     }
+    .homename {
+        padding: 8vh 8vh 1vh;
+        width: 12vw;
+        //overflow: hidden;
+        .ericvector
+        {
+            width: 30vh;
+            .letterE {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+            .letterR {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+            .letterI1 {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+            .letterC {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+        }
+        .jiangvector {
+            margin-left: -16vh;
+            width: 32vh;
+            .letterJ {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+            .letterI2 {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+            .letterA {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+            .letterN {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+            .letterG {
+                fill: none; stroke:black; stroke-width: 4; stroke-miterlimit:10;
+            }
+        }
+    }
     .text {
         width: 60%;
         padding-left: 20%;
         padding-right: 20%;
-        padding-top: 20vh;
+        padding-top: 10vh;
         padding-bottom: 10vh;
         line-height: 2rem;
         color: black;
@@ -123,6 +164,9 @@ body {
     .scene_element--slideOut {
         animation-name: slideOut;
     }
+    .scene_element--slideDown {
+        animation-name: slideDown;
+    }
     .scene_element--fadeIn {
         animation-name: fadeIn;
     }
@@ -140,6 +184,17 @@ body {
     100% {
         opacity: 1;
         transform: none;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
     }
 }
 
