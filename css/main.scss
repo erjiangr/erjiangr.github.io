@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Helvetica;
     margin: 0;
@@ -13,34 +17,37 @@ body {
 }
 
 .container {
-    .name {
-        padding: 30vh 8vw 10vh;
-        .letterE {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
-        }
-        .letterR {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
-        }
-        .letterI1 {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
-        }
-        .letterC {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
-        }
-        .letterJ {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
-        }
-        .letterI2 {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
-        }
-        .letterA {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
-        }
-        .letterN {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
-        }
-        .letterG {
-            fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+    .home{ 
+        height: 100vh;
+        .name {
+            padding: 30vh 8vw 10vh;
+            .letterE {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
+            .letterR {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
+            .letterI1 {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
+            .letterC {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
+            .letterJ {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
+            .letterI2 {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
+            .letterA {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
+            .letterN {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
+            .letterG {
+                fill: none; stroke:black; stroke-width: 2; stroke-miterlimit:10;
+            }
         }
     }
     .chevron {
@@ -63,116 +70,42 @@ body {
             fill:none; stroke:black; stroke-width:3; stroke-miterlimit:10;
         }
     }
-    .text {
-        width: 60%;
-        padding-left: 20%;
-        padding-right: 20%;
-        padding-top: 20vh;
-        padding-bottom: 10vh;
-        line-height: 2rem;
-        color: black;
-        .pic {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
+    .about {
+        height: 100vh;
+        .text {
+            width: 60%;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-top: 20vh;
+            padding-bottom: 10vh;
+            line-height: 2rem;
+            color: black;
+            
         }
     }
-    .loaderBloc {
-        width: 60px;
-        height: 60px;
-        padding-left: 50%;
-        padding-right: 50%;
-        padding-top: 10em;
-        .loader {
-            border: 2px solid white; /* Light grey */
-            border-top: 2px solid black; /* Blue */
-            border-radius: 100%;
-            width: 100%;
-            height: 100%;
-            animation: spin 0.75s linear infinite;
-    
-        }
-    }
-    .portfolio {
-        column-count: 2;
-        column-gap: 20px;
-        opacity:0;
-        .portcolumnone {
-            display: grid;
-            grid-template-rows: auto;
-            break-inside: avoid;
-        }
-        .portcolumntwo {
-            display: grid;
-            grid-template-rows: auto;
-            break-inside: avoid;
+    .port {
+        padding-top: 10vh;
+        .portfolio {
+            width: 60%;
+            padding-left: 20%;
+            padding-right: 20%;
+            column-count: 2;
+            column-gap: 13px;
+            .pic {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+            .portcolumnone {
+                display: grid;
+                grid-template-rows: auto;
+                break-inside: avoid;
+            }
+            .portcolumntwo {
+                display: grid;
+                grid-template-rows: auto;
+                break-inside: avoid;
+            }
         }
     }
 }
-
-
-.m-scene {
-    .scene_element {
-        animation-duration: 1s;
-        transition-timing-function: ease-in;
-        animation-fill-mode: both;
-    }
-    .scene_element--slideUp {
-        animation-name: slideUp;
-    }
-    .scene_element--slideOut {
-        animation-name: slideOut;
-    }
-    .scene_element--fadeIn {
-        animation-name: fadeIn;
-    }
-    .scene_element--fadeOut {
-        animation-name: fadeOut;
-    }
-}
-
-
-@keyframes slideUp {
-    0% {
-        opacity: 0%;
-        transform: translate3d(0, 100%, 0)
-    }
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-@keyframes slideOut{
-    0% {
-        opacity: 1;
-        transform: none;
-    }
-    100% {
-        opacity: 0%;
-        transform: translate3d(0, -50%, 0)
-    }
-}
-
-@keyframes fadeIn{
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes fadeOut{
-    0% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }

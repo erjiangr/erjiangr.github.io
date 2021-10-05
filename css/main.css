@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Helvetica;
   margin: 0;
@@ -12,67 +16,71 @@ body {
   overflow: scroll;
 }
 
-.container .name {
+.container .home {
+  height: 100vh;
+}
+
+.container .home .name {
   padding: 30vh 8vw 10vh;
 }
 
-.container .name .letterE {
+.container .home .name .letterE {
   fill: none;
   stroke: black;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
-.container .name .letterR {
+.container .home .name .letterR {
   fill: none;
   stroke: black;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
-.container .name .letterI1 {
+.container .home .name .letterI1 {
   fill: none;
   stroke: black;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
-.container .name .letterC {
+.container .home .name .letterC {
   fill: none;
   stroke: black;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
-.container .name .letterJ {
+.container .home .name .letterJ {
   fill: none;
   stroke: black;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
-.container .name .letterI2 {
+.container .home .name .letterI2 {
   fill: none;
   stroke: black;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
-.container .name .letterA {
+.container .home .name .letterA {
   fill: none;
   stroke: black;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
-.container .name .letterN {
+.container .home .name .letterN {
   fill: none;
   stroke: black;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
 
-.container .name .letterG {
+.container .home .name .letterG {
   fill: none;
   stroke: black;
   stroke-width: 2;
@@ -112,7 +120,11 @@ body {
   stroke-miterlimit: 10;
 }
 
-.container .text {
+.container .about {
+  height: 100vh;
+}
+
+.container .about .text {
   width: 60%;
   padding-left: 20%;
   padding-right: 20%;
@@ -122,41 +134,27 @@ body {
   color: black;
 }
 
-.container .text .pic {
+.container .port {
+  padding-top: 10vh;
+}
+
+.container .port .portfolio {
+  width: 60%;
+  padding-left: 20%;
+  padding-right: 20%;
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 13px;
+          column-gap: 13px;
+}
+
+.container .port .portfolio .pic {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
 
-.container .loaderBloc {
-  width: 60px;
-  height: 60px;
-  padding-left: 50%;
-  padding-right: 50%;
-  padding-top: 10em;
-}
-
-.container .loaderBloc .loader {
-  border: 2px solid white;
-  /* Light grey */
-  border-top: 2px solid black;
-  /* Blue */
-  border-radius: 100%;
-  width: 100%;
-  height: 100%;
-  -webkit-animation: spin 0.75s linear infinite;
-          animation: spin 0.75s linear infinite;
-}
-
-.container .portfolio {
-  -webkit-column-count: 2;
-          column-count: 2;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
-  opacity: 0;
-}
-
-.container .portfolio .portcolumnone {
+.container .port .portfolio .portcolumnone {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto;
@@ -165,151 +163,12 @@ body {
           break-inside: avoid;
 }
 
-.container .portfolio .portcolumntwo {
+.container .port .portfolio .portcolumntwo {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   -webkit-column-break-inside: avoid;
           break-inside: avoid;
-}
-
-.m-scene .scene_element {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.m-scene .scene_element--slideUp {
-  -webkit-animation-name: slideUp;
-          animation-name: slideUp;
-}
-
-.m-scene .scene_element--slideOut {
-  -webkit-animation-name: slideOut;
-          animation-name: slideOut;
-}
-
-.m-scene .scene_element--fadeIn {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-}
-
-.m-scene .scene_element--fadeOut {
-  -webkit-animation-name: fadeOut;
-          animation-name: fadeOut;
-}
-
-@-webkit-keyframes slideUp {
-  0% {
-    opacity: 0%;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    opacity: 0%;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@-webkit-keyframes slideOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-  100% {
-    opacity: 0%;
-    -webkit-transform: translate3d(0, -50%, 0);
-            transform: translate3d(0, -50%, 0);
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-  100% {
-    opacity: 0%;
-    -webkit-transform: translate3d(0, -50%, 0);
-            transform: translate3d(0, -50%, 0);
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 0%;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 100%;
-  }
-  100% {
-    opacity: 0%;
-  }
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 /*# sourceMappingURL=main.css.map */
